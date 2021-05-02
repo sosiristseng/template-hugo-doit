@@ -2,7 +2,7 @@ image: klakegg/hugo:ext-alpine-ci
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
-  HUGO_BASE_URL: 'https://sosiristseng.gitlab.io/template-hugo-codeit/'
+  HUGO_BASE_URL: 'https://sosiristseng.gitlab.io/template-hugo-doit/'
 
 test:
   script:
