@@ -1,6 +1,6 @@
 # Hugo CodeIT template
 
-This repository is served as a tech blog template powered by [Hugo](https://gohugo.io/) and [codeIT](https://github.com/sunt-programator/CodeIT/) theme.
+This repository is served as a tech blog template powered by [Hugo](https://gohugo.io/) and [DoIt](https://github.com/HEIGE-PCloud/DoIt) theme.
 
 ## On GitHub
 
