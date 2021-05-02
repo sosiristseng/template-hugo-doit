@@ -1,16 +1,16 @@
-baseURL = "https://sosiristseng.github.io/template-hugo-codeit/"
+baseURL = "https://sosiristseng.github.io/template-hugo-doit/"
 canonifyURLs = false
 relativeURLs = false
 
 # [en, zh-cn, fr, pl, ...] for default content language
 defaultContentLanguage = "en"
 # theme
-theme = "CodeIT"
+theme = "DoIt"
 # themes directory
 # themesDir = "themes/CodeIT"
 
 # website title
-title = "CodeIT"
+title = "DoIt"
 
 # whether to use robots.txt
 enableRobotsTXT = true
