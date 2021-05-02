@@ -70,7 +70,7 @@ ignoreErrors = ["error-remote-getjson"]
         identifier = "about"
         pre = ""
         post = ""
-        name = "About CodeIT"
+        name = "About Me"
         url = "about/"
         title = ""
         weight = 5
@@ -79,20 +79,20 @@ ignoreErrors = ["error-remote-getjson"]
         pre = "<i class='fab fa-github fa-fw'></i>"
         post = ""
         name = ""
-        url = "https://github.com/sosiristseng/template-hugo-codeit"
+        url = "https://github.com/sosiristseng/template-hugo-doit"
         title = "GitHub"
         weight = 6
     [languages.en.params]
       # site description
-      description = "About CodeIT Theme"
+      description = "About DoIt Theme"
       # site keywords
       keywords = ["Theme", "Hugo"]
       # App icon config
       [languages.en.params.app]
         # optional site title override for the app when added to an iOS home screen or Android launcher
-        title = "CodeIT"
+        title = "DoIt"
         # whether to omit favicon resource links
-        noFavicon = true
+        noFavicon = false
         # modern SVG favicon to use in place of older style .png and .ico files
         svgFavicon = ""
         # Android browser theme color
@@ -220,7 +220,7 @@ ignoreErrors = ["error-remote-getjson"]
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
-  gitRepo = "https://github.com/sosiristseng/template-hugo-codeit"
+  gitRepo = "https://github.com/sosiristseng/template-hugo-doit"
   # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
   # date format
@@ -235,6 +235,9 @@ ignoreErrors = ["error-remote-getjson"]
     desktopMode = "fixed"
     # mobile header mode ("fixed", "normal", "auto")
     mobileMode = "auto"
+    # theme change mode ("switch", "select")
+    # 主题切换模式 ("switch", "select")
+    themeChangeMode = "switch"
     # Header title config
     [params.header.title]
       # URL of the LOGO
@@ -304,6 +307,8 @@ ignoreErrors = ["error-remote-getjson"]
     linkToMarkdown = true
     # whether to show the full text content in RSS
     rssFullText = false
+    # Page style ("normal", "wide")
+    pageStyle = "wide"
     # Table of the contents config
     [params.page.toc]
       # whether to enable the table of the contents
@@ -379,7 +384,7 @@ ignoreErrors = ["error-remote-getjson"]
       Mix = false
     # Comment config
     [params.page.comment]
-      enable = true
+      enable = false
       # Disqus comment config (https://disqus.com/)
       [params.page.comment.disqus]
         enable = false
@@ -413,6 +418,24 @@ ignoreErrors = ["error-remote-getjson"]
         # you can store your own data files in the same path under your project:
         # "assets/data/emoji/"
         emoji = ""
+      # Waline comment config (https://waline.js.org)
+      [params.page.comment.waline]
+        enable = false
+        serverURL = ""
+        placeholder = "Just Go Go."
+        wordLimit = 0
+        avatar = "mp"
+        meta = ["nick", "mail", "link"]
+        pageSize = 10
+        lang = "en"
+        visitor = true
+        highlight = true
+        avatarCDN = ""
+        avatarForce = false
+        emojiCDN = "https://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/"
+        emojiMaps = "微博表情包"
+        requiredFields = []
+        anonymous = false
       # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
       [params.page.comment.facebook]
         enable = false
