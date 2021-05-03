@@ -243,7 +243,7 @@ ignoreErrors = ["error-remote-getjson"]
       # URL of the LOGO
       logo = ""
       # title name
-      name = "CodeIT"
+      name = "DoIT"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = "<i class='fas fa-laptop-code fa-fw'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
