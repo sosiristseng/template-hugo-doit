@@ -1,0 +1,26 @@
+name: Check markdown links
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"  # Every Monday
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@master
+        with:
+          args: '--accept 200,204,429 --verbose --no-progress **/*.md'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Create Issue From File
+        uses: peter-evans/create-issue-from-file@v3
+        with:
+          title: Link Checker Report
+          content-filepath: ./lychee/out.md
+          labels: report, automated issue
