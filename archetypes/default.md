@@ -21,7 +21,6 @@ toc:
 math:
   enable: false
 lightgallery: false
-license: ""
 ---
 
 The summary.

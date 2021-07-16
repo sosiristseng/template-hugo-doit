@@ -6,8 +6,9 @@ relativeURLs = false
 defaultContentLanguage = "en"
 # theme
 theme = "DoIt"
+
 # themes directory
-# themesDir = "themes/CodeIT"
+# themesDir = "themes/DoIt"
 
 # website title
 title = "DoIt"
@@ -104,8 +105,8 @@ ignoreErrors = ["error-remote-getjson"]
       # Search config
       [languages.en.params.search]
         enable = true
-        # type of search engine ("lunr", "algolia")
-        type = "lunr"
+        # type of search engine ("lunr", "algolia", "fuse")
+        type = "fuse"
         # max index length of the chunked content
         contentLength = 4000
         # placeholder of the search bar
@@ -118,6 +119,21 @@ ignoreErrors = ["error-remote-getjson"]
         highlightTag = "em"
         # whether to use the absolute URL based on the baseURL in search index
         absoluteURL = false
+        [languages.en.params.search.algolia]
+          index = ""
+          appID = ""
+          searchKey = ""
+        [languages.en.params.search.fuse]
+          # https://fusejs.io/api/options.html
+          isCaseSensitive = false
+          minMatchCharLength = 2
+          findAllMatches = false
+          location = 0
+          threshold = 0.3
+          distance = 100
+          ignoreLocation = false
+          useExtendedSearch = false
+          ignoreFieldNorm = false
       # Home page config
       [languages.en.params.home]
         # amount of RSS pages
@@ -207,6 +223,7 @@ ignoreErrors = ["error-remote-getjson"]
         XMPP = ""
         Matrix = ""
         Bilibili = ""
+        ORCID = ""
         Email = "sosiristeng@gmail.com"
         RSS = true
         # [languages.en.params.social.Mastodon]
@@ -229,6 +246,9 @@ ignoreErrors = ["error-remote-getjson"]
   images = [""]
   mainSections = ["posts"]
 
+  # enable Porgressive web application (PWA)
+  enablePWA = true
+
   # Header config
   [params.header]
     # desktop header mode ("fixed", "normal", "auto")
@@ -236,16 +256,15 @@ ignoreErrors = ["error-remote-getjson"]
     # mobile header mode ("fixed", "normal", "auto")
     mobileMode = "auto"
     # theme change mode ("switch", "select")
-    # 主题切换模式 ("switch", "select")
     themeChangeMode = "switch"
     # Header title config
     [params.header.title]
       # URL of the LOGO
       logo = ""
       # title name
-      name = "DoIT"
+      name = "Gogogo"
       # you can add extra information before the name (HTML format is supported), such as icons
-      pre = "<i class='fas fa-laptop-code fa-fw'></i>"
+      pre = "<i class='fas fa-edit fa-fw'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       post = ""
       # whether to use typeit animation for title name
@@ -626,3 +645,10 @@ ignoreErrors = ["error-remote-getjson"]
   section = ["HTML"]
   taxonomy = ["HTML"]
   taxonomyTerm = ["HTML"]
+
+# Options for taxonomies
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"
+series = "series"
