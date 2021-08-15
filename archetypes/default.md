@@ -23,6 +23,4 @@ math:
 lightgallery: false
 ---
 
-The summary.
-
 <!--more-->

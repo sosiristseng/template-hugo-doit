@@ -1,4 +1,5 @@
 baseURL = "https://sosiristseng.github.io/template-hugo-doit/"
+
 canonifyURLs = false
 relativeURLs = false
 
@@ -6,9 +7,6 @@ relativeURLs = false
 defaultContentLanguage = "en"
 # theme
 theme = "DoIt"
-
-# themes directory
-# themesDir = "themes/DoIt"
 
 # website title
 title = "DoIt"
@@ -19,9 +17,6 @@ enableRobotsTXT = true
 enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
-
-# Ignore get JSON errors.
-ignoreErrors = ["error-remote-getjson"]
 
 [languages]
   [languages.en]
@@ -87,7 +82,7 @@ ignoreErrors = ["error-remote-getjson"]
       # site description
       description = "About DoIt Theme"
       # site keywords
-      keywords = ["Theme", "Hugo"]
+      keywords = ["Blog", "Hugo"]
       # App icon config
       [languages.en.params.app]
         # optional site title override for the app when added to an iOS home screen or Android launcher
@@ -159,17 +154,17 @@ ignoreErrors = ["error-remote-getjson"]
         [languages.en.params.home.posts]
           enable = true
           # special amount of posts in each home posts page
-          paginate = 6
+          paginate = 10
       # Social config in home page
       [languages.en.params.social]
         GitHub = "sosiristseng"
         Linkedin = ""
-        Twitter = "sosiristseng"
-        Instagram = "sosiristseng"
+        Twitter = ""
+        Instagram = ""
         Facebook = ""
-        Telegram = "sosiristseng"
+        Telegram = ""
         Medium = ""
-        Gitlab = "sosiristseng"
+        Gitlab = ""
         Youtubelegacy = "xxxx"
         Youtubecustom = ""
         Youtubechannel = ""
@@ -177,7 +172,7 @@ ignoreErrors = ["error-remote-getjson"]
         Quora = ""
         Keybase = ""
         Pinterest = ""
-        Reddit = "sosiristseng"
+        Reddit = ""
         Codepen = ""
         FreeCodeCamp = ""
         Bitbucket = ""
@@ -224,7 +219,9 @@ ignoreErrors = ["error-remote-getjson"]
         Matrix = ""
         Bilibili = ""
         ORCID = ""
-        Email = "sosiristeng@gmail.com"
+        Liberapay = ""
+        Ko-Fi = ""
+        Email = ""
         RSS = true
         # [languages.en.params.social.Mastodon]
         #   id = ""
@@ -563,7 +560,7 @@ ignoreErrors = ["error-remote-getjson"]
     # located in "themes/CodeIT/assets/data/cdn/" directory
     # you can store your own data files in the same path under your project:
     # "assets/data/cdn/"
-    data = "jsdelivr.yml"
+    data = ""
 
   # Compatibility config
   [params.compatibility]
@@ -615,7 +612,7 @@ ignoreErrors = ["error-remote-getjson"]
 # Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
 [Permalinks]
   # posts = ":year/:month/:filename"
-  posts = ":filename"
+  posts = ":slug"
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
