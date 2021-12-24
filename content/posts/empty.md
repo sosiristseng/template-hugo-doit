@@ -9,6 +9,7 @@ description: ""
 
 tags: []
 categories: []
+series: [Test, Another Test]
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
