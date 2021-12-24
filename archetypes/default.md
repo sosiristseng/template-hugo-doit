@@ -9,18 +9,26 @@ description: ""
 
 tags: []
 categories: []
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
+series: []
+seriesNavigation: true
 
 featuredImage: ""
 featuredImagePreview: ""
 
+hiddenFromHomePage: false
+hiddenFromSearch: false
+
+twemoji: false
+lightgallery: true
+ruby: true
+fraction: true
+fontawesome: false
+
 toc:
   enable: true
+  auto: true
 math:
-  enable: false
-lightgallery: false
+  enable: true
 ---
 
 <!--more-->
