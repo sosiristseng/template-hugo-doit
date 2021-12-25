@@ -6,10 +6,12 @@ This repository is served as a tech blog template powered by [Hugo](https://gohu
 
 Click the `Use this template` green button to copy the repo to yours.
 
-## For Gitlab
+## On Gitlab
 
-New -> New project -> import project -> repo by URL.
+New -> New project -> import project -> repo by URL. -> Paste `https://github.com/sosiristseng/template-hugo-doit.git`
 
 ## Notes
 
-You will need to edit the `baseurl` entry in `config.toml` for proper rendering in your site.
+For proper rendering, you should edit the `baseurl` entries to your donmain
+1. `baseurl` in `config.toml`
+2. `HUGO_BASE_URL` in `.gitlab-ci.yml`

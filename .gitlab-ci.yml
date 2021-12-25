@@ -1,6 +1,7 @@
 image: klakegg/hugo:ext-alpine-ci
 
 variables:
+  GIT_STRATEGY: clone
   GIT_SUBMODULE_STRATEGY: recursive
   HUGO_BASE_URL: 'https://sosiristseng.gitlab.io/template-hugo-doit/'
 
@@ -12,7 +13,7 @@ test:
 
 pages:
   script:
-  - apk add --update brotli
+  - apk add --update --no-cache brotli
   - hugo --gc --minify -b ${HUGO_BASE_URL}
   - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\|svg\|xml\)$' -exec gzip   -f -k {} \; || echo 'Gzip failed. Skipping...'
   - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\|svg\|xml\)$' -exec brotli -f -k {} \; || echo 'Brotli failed. Skipping...'
