@@ -10,5 +10,8 @@
           "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
           "automerge": true
         }
+    ],
+    "schedule": [
+      "before 3am on the first day of the month"
     ]
 }
