@@ -3,7 +3,7 @@ image: klakegg/hugo:0.91.2-ext-alpine-ci
 variables:
   GIT_STRATEGY: clone
   GIT_SUBMODULE_STRATEGY: recursive
-  HUGO_BASE_URL: 'https://sosiris-templates.gitlab.io/hugo-doit/'
+  HUGO_BASE_URL: 'https://sosiristseng.gitlab.io/template-hugo-doit/'
 
 before_script:
   - apk add --update --no-cache brotli git
