@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - main
+      
+env:
+  HUGO_BASE_URL: "https://sosiristseng.github.io/template-hugo-doit/"
 
 jobs:
   build:
@@ -23,7 +26,7 @@ jobs:
         hugo-version: 'latest'
         extended: true
     - name: Build
-      run: hugo --minify
+      run: hugo --gc --minify -b ${HUGO_BASE_URL}
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3.8.0
       if: github.ref == 'refs/heads/main'
