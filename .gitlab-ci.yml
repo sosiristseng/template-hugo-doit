@@ -1,26 +1,6 @@
-image: klakegg/hugo:0.91.2-ext-alpine-ci
+include:
+  - project: 'sosiristseng/gitlab-templates'
+    file: '/hugo.gitlab-ci.yml'
 
 variables:
-  GIT_STRATEGY: clone
-  GIT_SUBMODULE_STRATEGY: recursive
   HUGO_BASE_URL: 'https://sosiristseng.gitlab.io/template-hugo-doit/'
-
-before_script:
-  - apk add --update --no-cache brotli git
-  - hugo --gc --minify -b ${HUGO_BASE_URL}
-
-test:
-  script:
-  - echo "Building finished."
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-
-pages:
-  script:
-  - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\|svg\|xml\)$' -exec gzip   -f -k {} \; || echo 'Gzip failed. Skipping...'
-  - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\|svg\|xml\)$' -exec brotli -f -k {} \; || echo 'Brotli failed. Skipping...'
-  artifacts:
-    paths:
-    - public
-  rules:
-    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
