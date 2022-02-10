@@ -3,4 +3,4 @@ include:
     file: '/hugo.gitlab-ci.yml'
 
 variables:
-  HUGO_BASE_URL: 'https://sosiristseng.gitlab.io/template-hugo-doit/'
+  HUGO_BASE_URL: 'https://wwtemplates.gitlab.io/hugo-doit/'

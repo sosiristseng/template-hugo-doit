@@ -8,10 +8,10 @@ Click the `Use this template` green button to copy the repo to yours.
 
 ## On Gitlab
 
-New -> New project -> import project -> repo by URL. -> Paste `https://github.com/sosiristseng/template-hugo-doit.git`
+New -> New project -> import project -> repo by URL. -> Paste `https://github.com/wwtemplates/hugo-doit.git`
 
 ## Notes
 
-For proper rendering, you should edit the `baseurl` entries to your donmain
+For proper rendering the website, you should edit the `baseurl` entries to your domain
 1. `baseurl` in `config.toml`
 2. `HUGO_BASE_URL` in `.gitlab-ci.yml`
