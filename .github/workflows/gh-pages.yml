@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-      
+
 env:
   HUGO_BASE_URL: "https://sosiristseng.github.io/template-hugo-doit/"
 
@@ -15,22 +15,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout master
-      uses: actions/checkout@v2
-      with:
-        submodules: true  # Fetch Hugo themes (true OR recursive)
-        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: 'latest'
-        extended: true
-    - name: Build
-      run: hugo --gc --minify -b ${HUGO_BASE_URL}
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.8.0
-      if: github.ref == 'refs/heads/main'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        force_orphan: true
-        publish_dir: ./public
+      - name: checkout master
+        uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+      - name: Build
+        run: hugo --gc --minify -b ${HUGO_BASE_URL}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force_orphan: true
+          publish_dir: ./public
+          full_commit_message: ${{ github.event.head_commit.message }}
