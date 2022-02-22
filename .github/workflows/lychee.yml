@@ -1,4 +1,4 @@
-name: Check markdown links
+name: Check markdown links (Lychee)
 
 on:
   repository_dispatch:
@@ -26,4 +26,4 @@ jobs:
         with:
           title: Link Checker Report
           content-filepath: ./lychee/out.md
-          labels: report, automated issue
+          labels: lychee
