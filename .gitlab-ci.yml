@@ -1,5 +1,5 @@
 include:
-  - project: 'sosiristseng/gitlab-templates'
+  - project: 'sosiristseng/gitlab-examples'
     file: '/hugo.gitlab-ci.yml'
 
 variables:
