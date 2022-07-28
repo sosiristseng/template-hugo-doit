@@ -6,6 +6,9 @@ This repository is served as a tech blog template powered by [Hugo](https://gohu
 
 Click the `Use this template` green button to copy the repo to yours.
 
+Open your repository settings => Pages => GitHub Pages
+=> Build and deployment => Source, Select `GitHub actions`
+
 ## On Gitlab
 
 New -> New project -> import project -> repo by URL. -> Paste `https://github.com/wwtemplates/hugo-doit.git`
