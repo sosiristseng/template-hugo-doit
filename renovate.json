@@ -3,7 +3,7 @@
         "config:base"
     ],
     "schedule": [
-      "before 3am on Monday"
+      "weekly"
     ],
     "git-submodules": {
         "enabled": true
