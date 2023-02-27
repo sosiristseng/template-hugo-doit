@@ -101,7 +101,7 @@ description = "About DoIt Template"
 # site keywords
 keywords = ["Blog", "Hugo", "Template"]
 # CodeIT theme version
-version = "0.2.X"
+version = "0.3.X"
 # site default theme ("light", "dark", "auto")
 defaultTheme = "auto"
 # public git repo url only then enableGitInfo is true
