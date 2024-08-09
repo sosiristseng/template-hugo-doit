@@ -100,7 +100,7 @@ title = "Hugo DoIt Theme Template"
 description = "About DoIt Template"
 # site keywords
 keywords = ["Blog", "Hugo", "Template"]
-# CodeIT theme version
+# theme version
 version = "0.3.X"
 # site default theme ("light", "dark", "auto")
 defaultTheme = "auto"
@@ -721,6 +721,11 @@ ignoreFieldNorm    = false
     table          = true
     taskList       = true
     typographer    = true
+    [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
     [markup.goldmark.renderer]
     # whether to use HTML tags directly in the document
     unsafe = true
