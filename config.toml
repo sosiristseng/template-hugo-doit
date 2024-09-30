@@ -701,6 +701,14 @@ ignoreLocation     = false
 useExtendedSearch  = false
 ignoreFieldNorm    = false
 
+# Author config
+[params.author]
+name  = "Wen-Wei Tseng"
+email = "sosiristseng@gmail.com"
+link  = "https://github.com/sosiristseng"
+# avatar = "/images/avatar.webp"
+gravatarEmail = "sosiristseng@gmail.com"
+
 # Markup related configuration in Hugo
 [markup]
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
@@ -734,14 +742,6 @@ ignoreFieldNorm    = false
   startLevel = 2
   endLevel   = 6
 
-# Author config
-[author]
-name  = "Wen-Wei Tseng"
-email = "sosiristseng@gmail.com"
-link  = "https://github.com/sosiristseng"
-# avatar = "/images/avatar.webp"
-gravatarEmail = "sosiristseng@gmail.com"
-
 # Sitemap config
 [sitemap]
 changefreq = "weekly"
@@ -749,7 +749,7 @@ filename   = "sitemap.xml"
 priority   = 0.5
 
 # Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
-[Permalinks]
+[permalinks]
 posts = ":year/:month/:filename"
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
