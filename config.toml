@@ -1,3 +1,5 @@
+
+# https://hugodoit.pages.dev/theme-documentation-basics/#basic-configuration
 baseURL = "https://sosiristseng.github.io/template-hugo-doit/"
 
 canonifyURLs = false
@@ -5,11 +7,9 @@ relativeURLs = false
 
 # [en, zh-cn, fr, pl, ...] for default content language
 defaultContentLanguage = "en"
+languageCode = "en"
 # theme
 theme = "DoIt"
-
-# website title
-title = "DoIt"
 
 # whether to use robots.txt
 enableRobotsTXT = true
@@ -18,107 +18,96 @@ enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
 
-[languages]
-  [languages.en]
-  weight = 1
-  # language code
-  languageCode = "en"
-  # language name
-  languageName = "English"
-  # whether to include Chinese/Japanese/Korean
-  hasCJKLanguage = true
-  # default amount of posts in each pages
-  paginate = 12
-  # copyright description used only for seo schema
-  copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-    [languages.en.params]
-      # [UA-XXXXXXXX-X] google analytics code
-      googleAnalytics = ""
-    # Menu config
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-      identifier = "posts"
-      # you can add extra information before the name (HTML format is supported), such as icons
-      pre = ""
-      # you can add extra information after the name (HTML format is supported), such as icons
-      post = ""
-      name = "Posts"
-      url  = "posts/"
-      # title will be shown when you hover on this menu link.
-      title  = ""
-      weight = 1
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
+  [[menu.main]]
+    identifier = "series"
+    pre        = ""
+    post       = ""
+    name       = "Series"
+    url        = "series/"
+    title      = ""
+    weight     = 4
 
-      [[languages.en.menu.main]]
-      identifier = "tags"
-      pre        = ""
-      post       = ""
-      name       = "Tags"
-      url        = "tags/"
-      title      = ""
-      weight     = 2
+  [[menu.main]]
+    identifier = "about"
+    pre        = ""
+    post       = ""
+    name       = "About Me"
+    url        = "about/"
+    title      = ""
+    weight     = 5
 
-      [[languages.en.menu.main]]
-      identifier = "categories"
-      pre        = ""
-      post       = ""
-      name       = "Categories"
-      url        = "categories/"
-      title      = ""
-      weight     = 3
+  [[menu.main]]
+    identifier = "github"
+    pre        = "<i class='fab fa-github fa-fw'></i>"
+    post       = ""
+    name       = ""
+    url        = "https://github.com/sosiristseng/template-hugo-doit"
+    title      = "GitHub"
+    weight     = 6
 
-      [[languages.en.menu.main]]
-      identifier = "series"
-      pre        = ""
-      post       = ""
-      name       = "Series"
-      url        = "series/"
-      title      = ""
-      weight     = 4
-
-      [[languages.en.menu.main]]
-      identifier = "about"
-      pre        = ""
-      post       = ""
-      name       = "About Me"
-      url        = "about/"
-      title      = ""
-      weight     = 5
-
-      [[languages.en.menu.main]]
-      identifier = "github"
-      pre        = "<i class='fab fa-github fa-fw'></i>"
-      post       = ""
-      name       = ""
-      url        = "https://github.com/sosiristseng/template-hugo-doit"
-      title      = "GitHub"
-      weight     = 6
-
+# https://hugodoit.pages.dev/theme-documentation-basics/#site-configuration
 [params]
-# website title
-title = "Hugo DoIt Theme Template"
-# site description
-description = "About DoIt Template"
-# site keywords
-keywords = ["Blog", "Hugo", "Template"]
-# theme version
-version = "0.3.X"
-# site default theme ("light", "dark", "auto")
-defaultTheme = "auto"
-# public git repo url only then enableGitInfo is true
-gitRepo = "https://github.com/sosiristseng/template-hugo-doit"
-# which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
-fingerprint = ""
-# date format
-dateFormat = "2006-01-02"
-# website images for Open Graph and Twitter Cards
-images = [""]
-# enable Porgressive web application (PWA)
-enablePWA = true
-# license information
-license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+  # website title
+  title = "DoIt Template"
+  # site description
+  description = "About DoIt Template"
+  # site keywords
+  keywords = ["Blog", "Hugo", "Template"]
+  # theme version
+  version = "0.3.X"
+  # site default theme ("light", "dark", "auto")
+  defaultTheme = "auto"
+  # public git repo url only then enableGitInfo is true
+  gitRepo = "https://github.com/sosiristseng/template-hugo-doit"
+  # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
+  fingerprint = ""
+  # date format
+  dateFormat = "2006-01-02"
+  # website images for Open Graph and Twitter Cards
+  images = [""]
+  # enable Porgressive web application (PWA)
+  enablePWA = false
+  # [Experimental] cache remote images in markdown, more info: https://github.com/HEIGE-PCloud/DoIt/pull/860#issue-1574342372
+  cacheRemoteImages = true
+  # [Experimental] generate image srcset attribute with hugo image processing feature.
+  optimizeImages = true
+  # [Experimental] resize method for srcset attribute in optimizeImages, more info: https://gohugo.io/content-management/image-processing/#image-processing-options
+  srcsetSmallResizeMethod = "700x webp Lanczos q75"
+  srcsetDefaultResizeMethod = "1200x webp Lanczos q75"
+  srcsetLargeResizeMethod = "2000x webp Lanczos q75"
+  # license information
+  license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
-  # App icon config
-  [params.app]
+# App icon config
+[params.app]
   # optional site title override for the app when added to an iOS home screen or Android launcher
   title = "Los los los"
   # whether to omit favicon resource links
@@ -132,20 +121,21 @@ license = '<a rel="license external nofollow noopener noreffer" href="https://cr
   # Windows v8-10 tile color
   tileColor = "#da532c"
 
-  # Header config
-  [params.header]
-  # desktop header mode ("fixed", "normal", "auto")
-  desktopMode = "fixed"
-  # mobile header mode ("fixed", "normal", "auto")
-  mobileMode = "auto"
-  # theme change mode ("switch", "select")
+[params.image]
+  # cache remote images for better optimisations
+  cacheRemote = true
+  # Image resizing and optimisation
+  optimise = true
+
+# Header config
+[params.header]
   themeChangeMode = "switch"
-    # Header title config
-    [params.header.title]
+  # Header title config
+  [params.header.title]
     # URL of the LOGO
     logo = ""
     # title name
-    name = "Gogogo"
+    name = ""
     # you can add extra information before the name (HTML format is supported), such as icons
     pre = "<i class='fas fa-edit fa-fw'></i>"
     # you can add extra information after the name (HTML format is supported), such as icons
@@ -155,240 +145,253 @@ license = '<a rel="license external nofollow noopener noreffer" href="https://cr
 
 # Footer config
 [params.footer]
-enable = true
-# Custom content (HTML format is supported)
-custom = ''
-# whether to show Hugo and theme info
-hugo = true
-# Hosted on (HTML format is supported)
-# <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a>
-hostedOn = ''
-# whether to show copyright info
-copyright = true
-# whether to show the author
-author = true
-# site creation time
-since = 2020
-# ICP info only in China (HTML format is supported)
-icp = ""
-# license info (HTML format is supported)
-license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+  enable = true
+  # Custom content (HTML format is supported)
+  custom = ''
+  # whether to show Hugo and theme info
+  hugo = true
+  # Hosted on (HTML format is supported)
+  # <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a>
+  hostedOn = ''
+  # whether to show copyright info
+  copyright = true
+  # whether to show the author
+  author = true
+  # site creation time
+  since = 2020
+  # ICP info only in China (HTML format is supported)
+  icp = ""
+  # license info (HTML format is supported)
+  license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
 # Section (all posts) page config
 [params.section]
-# special amount of posts in each section page
-paginate = 20
-# date format (month and day)
-dateFormat = "01-02"
-# amount of RSS pages
-rss = 10
+  # special amount of posts in each section page
+  paginate = 20
+  # date format (month and day)
+  dateFormat = "01-02"
+  # amount of RSS pages
+  rss = 10
   # recently updated posts settings
   [params.section.recentlyUpdated]
-  enable   = true
-  rss      = true
-  days     = 30
-  maxCount = 10
+    enable   = true
+    rss      = true
+    days     = 30
+    maxCount = 10
 
 # List (category or tag) page config
 [params.list]
-# special amount of posts in each list page
-paginate = 20
-# date format (month and day)
-dateFormat = "01-02"
-# amount of RSS pages
-rss = 10
+  # special amount of posts in each list page
+  paginate = 20
+  # date format (month and day)
+  dateFormat = "01-02"
+  # amount of RSS pages
+  rss = 10
 
 # Home page config
 [params.home]
-# amount of RSS pages
-rss = 10
+  # amount of RSS pages
+  rss = 10
   # Home page profile
   [params.home.profile]
-  enable = true
-  # Gravatar Email for preferred avatar in home page
-  gravatarEmail = "sosiristseng@gmail.com"
-  # URL of avatar shown in home page
-  avatarURL = ""
-  # title shown in home page (HTML format is supported)
-  title = ""
-  # subtitle shown in home page
-  subtitle = "We are shaped by fate just as we shape it."
-  # whether to use typeit animation for subtitle
-  typeit = true
-  # whether to show social links
-  social = true
-  # disclaimer (HTML format is supported)
-  disclaimer = "A random birb"
-  # Home page posts
+    enable = true
+    # Gravatar Email for preferred avatar in home page
+    gravatarEmail = "sosiristseng@gmail.com"
+    # URL of avatar shown in home page
+    avatarURL = ""
+    # title shown in home page (HTML format is supported)
+    title = ""
+    # subtitle shown in home page
+    subtitle = "We are shaped by fate just as we shape it."
+    # whether to use typeit animation for subtitle
+    typeit = true
+    # whether to show social links
+    social = true
+    # disclaimer (HTML format is supported)
+    disclaimer = "A random birb"
+    # Home page posts
   [params.home.posts]
-  enable = true
-  # special amount of posts in each home posts page
-  paginate = 10
+    enable = true
+    # special amount of posts in each home posts page
+    paginate = 10
 
 # Social config in home page
 [params.social]
-GitHub         = ""
-Linkedin       = ""
-Twitter        = ""
-Instagram      = ""
-Facebook       = ""
-Telegram       = ""
-Medium         = ""
-Gitlab         = ""
-Youtubelegacy  = ""
-Youtubecustom  = ""
-Youtubechannel = ""
-Tumblr         = ""
-Quora          = ""
-Keybase        = ""
-Pinterest      = ""
-Reddit         = ""
-Codepen        = ""
-FreeCodeCamp   = ""
-Bitbucket      = ""
-Stackoverflow  = ""
-Weibo          = ""
-Odnoklassniki  = ""
-VK             = ""
-Flickr         = ""
-Xing           = ""
-Snapchat       = ""
-Soundcloud     = ""
-Spotify        = ""
-Bandcamp       = ""
-Paypal         = ""
-Fivehundredpx  = ""
-Mix            = ""
-Goodreads      = ""
-Lastfm         = ""
-Foursquare     = ""
-Hackernews     = ""
-Kickstarter    = ""
-Patreon        = ""
-Steam          = ""
-Twitch         = ""
-Strava         = ""
-Skype          = ""
-Whatsapp       = ""
-Zhihu          = ""
-Douban         = ""
-Angellist      = ""
-Slidershare    = ""
-Jsfiddle       = ""
-Deviantart     = ""
-Behance        = ""
-Dribbble       = ""
-Wordpress      = ""
-Vine           = ""
-Googlescholar  = ""
-Researchgate   = ""
-Mastodon       = ""
-Thingiverse    = ""
-Devto          = ""
-Gitea          = ""
-XMPP           = ""
-Matrix         = ""
-Bilibili       = ""
-ORCID          = ""
-Liberapay      = ""
-Ko-Fi          = ""
-BuyMeACoffee   = ""
-Linktree       = ""
-QQ             = ""
-QQGroup        = ""
-Email          = ""
-RSS            = true
+  GitHub         = ""
+  Linkedin       = ""
+  Twitter        = ""
+  Instagram      = ""
+  Facebook       = ""
+  Telegram       = ""
+  Medium         = ""
+  Gitlab         = ""
+  Youtubelegacy  = ""
+  Youtubecustom  = ""
+  Youtubechannel = ""
+  Tumblr         = ""
+  Quora          = ""
+  Keybase        = ""
+  Pinterest      = ""
+  Reddit         = ""
+  Codepen        = ""
+  FreeCodeCamp   = ""
+  Bitbucket      = ""
+  Stackoverflow  = ""
+  Weibo          = ""
+  Odnoklassniki  = ""
+  VK             = ""
+  Flickr         = ""
+  Xing           = ""
+  Snapchat       = ""
+  Soundcloud     = ""
+  Spotify        = ""
+  Bandcamp       = ""
+  Paypal         = ""
+  Fivehundredpx  = ""
+  Mix            = ""
+  Goodreads      = ""
+  Lastfm         = ""
+  Foursquare     = ""
+  Hackernews     = ""
+  Kickstarter    = ""
+  Patreon        = ""
+  Steam          = ""
+  Twitch         = ""
+  Strava         = ""
+  Skype          = ""
+  Whatsapp       = ""
+  Zhihu          = ""
+  Douban         = ""
+  Angellist      = ""
+  Slidershare    = ""
+  Jsfiddle       = ""
+  Deviantart     = ""
+  Behance        = ""
+  Dribbble       = ""
+  Wordpress      = ""
+  Vine           = ""
+  Googlescholar  = ""
+  Researchgate   = ""
+  Mastodon       = ""
+  Thingiverse    = ""
+  Devto          = ""
+  Gitea          = ""
+  XMPP           = ""
+  Matrix         = ""
+  Bilibili       = ""
+  ORCID          = ""
+  Liberapay      = ""
+  Ko-Fi          = ""
+  BuyMeACoffee   = ""
+  Linktree       = ""
+  QQ             = ""
+  QQGroup        = ""
+  Email          = ""
+  RSS            = true
 
 # Page config
 [params.page]
-# whether to hide a page from home page
-hiddenFromHomePage = false
-# whether to hide a page from search results
-hiddenFromSearch = false
-# whether to enable twemoji
-twemoji = false
-# whether to enable lightgallery
-lightgallery = false
-# whether to enable the ruby extended syntax
-ruby = true
-# whether to enable the fraction extended syntax
-fraction = true
-# whether to show link to Raw Markdown content of the content
-linkToMarkdown = true
-# configure the link to view source the post
-linkToSource = "https://github.com/sosiristseng/template-hugo-doit/blob/main/content/{path}"
-# "https://github.com/user/repo/blob/main/{path}"
+  # whether to hide a page from home page
+  hiddenFromHomePage = false
+  # whether to hide a page from search results
+  hiddenFromSearch = false
+  # whether to enable twemoji
+  twemoji = false
+  # whether to enable lightgallery
+  lightgallery = false
+  # whether to enable the ruby extended syntax
+  ruby = true
+  # whether to enable the fraction extended syntax
+  fraction = true
+  # whether to show link to Raw Markdown content of the content
+  linkToMarkdown = true
+  # configure the link to view source the post
+  linkToSource = "https://github.com/sosiristseng/template-hugo-doit/blob/main/content/{path}"
+  # "https://github.com/user/repo/blob/main/{path}"
 
-# whether to show the full text content in RSS
-# configure the link to edit the post
-# linkToEdit = "https://github.com/sosiristseng/template-hugo-doit/edit/main/content/{path}"
-# https://github.com/user/repo/edit/main/{path}
-# https://gitlab.com/user/repo/-/edit/main/{path}
-# https://bitbucket.org/user/repo/src/main/{path}?mode=edit
+  # whether to show the full text content in RSS
+  # configure the link to edit the post
+  # linkToEdit = "https://github.com/sosiristseng/template-hugo-doit/edit/main/content/{path}"
+  # https://github.com/user/repo/edit/main/{path}
+  # https://gitlab.com/user/repo/-/edit/main/{path}
+  # https://bitbucket.org/user/repo/src/main/{path}?mode=edit
 
-# configure the link to report issue for the post
-# linkToReport = "https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}|"
-# https://github.com/user/repo/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/user/repo/blob/main/{path}|"
-# https://gitlab.com/user/repo/-/issues/new?issue[title]=[bug]%20{title}&issue[description]=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://gitlab.com/user/repo/-/edit/main/{path}|
+  # configure the link to report issue for the post
+  # linkToReport = "https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}|"
+  # https://github.com/user/repo/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/user/repo/blob/main/{path}|"
+  # https://gitlab.com/user/repo/-/issues/new?issue[title]=[bug]%20{title}&issue[description]=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://gitlab.com/user/repo/-/edit/main/{path}|
 
-rssFullText = false
-# whether to enable series navigation
-seriesNavigation = true
-
+  # whether to show the full text content in RSS
+  rssFullText = false
+  # whether to enable series navigation
+  seriesNavigation = true
+  # whether to enable last modified time
+  enableLastMod = true
+  # whether to enable word count
+  enableWordCount = true
+  # whether to enable reading time estimation
+  enableReadingTime = true
   # Display a message at the beginning of an article to warn the reader that its content might be outdated.
   [params.page.outdatedArticleReminder]
-  enable = true
-  # Display the reminder if the last modified time is more than 90 days ago.
-  reminder = 90
-  # Display warning if the last modified time is more than 180 days ago.
-  warning = 180
-
+    enable = false
+    # Display the reminder if the last modified time is more than 90 days ago.
+    reminder = 90
+    # Display warning if the last modified time is more than 180 days ago.
+    warning = 180
   # Table of the contents config
   [params.page.toc]
-  # whether to enable the table of the contents
-  enable = true
-  # whether to keep the static table of the contents in front of the post
-  keepStatic = false
-  # whether to make the table of the contents in the sidebar automatically collapsed
-  auto = true
+    # whether to enable the table of the contents
+    enable = true
+    # whether to keep the static table of the contents in front of the post
+    keepStatic = true
+    # whether to make the table of the contents in the sidebar automatically collapsed
+    auto = true
   # Code config
   [params.page.code]
-  # whether to show the copy button of the code block
-  copy = true
-  # the maximum number of lines of displayed code by default
-  maxShownLines = 15
+    # whether to enable line numbers in the code block
+    lineNos = false
+    # whether to enable line wrapping in the code block
+    wrap = false
+    # whether to show the copy button of the code block
+    copy = true
+    # the maximum number of lines of displayed code by default
+    maxShownLines = 15
+    # whether to display the header in the code block
+    header = true
   [params.page.table]
-  # whether to enable sorting in the tables
-  sort = true
+    # whether to enable sorting in the tables
+    sort = true
   # KaTeX mathematical formulas config (KaTeX https://katex.org/)
   [params.page.math]
-  enable = true
-  # default block delimiter is $$ ... $$ and \\[ ... \\]
-  blockLeftDelimiter  = ""
-  blockRightDelimiter = ""
-  # default inline delimiter is $ ... $ and \\( ... \\)
-  inlineLeftDelimiter  = ""
-  inlineRightDelimiter = ""
-  # KaTeX extension copy_tex
-  copyTex = true
-  # KaTeX extension mhchem
-  mhchem = true
+    enable = true
+    # default block delimiter is $$ ... $$ and \\[ ... \\]
+    blockLeftDelimiter  = ""
+    blockRightDelimiter = ""
+    # default inline delimiter is $ ... $ and \\( ... \\)
+    inlineLeftDelimiter  = ""
+    inlineRightDelimiter = ""
+    # KaTeX extension copy_tex
+    copyTex = true
+    # KaTeX extension mhchem
+    mhchem = true
+    # Use MathJax instead of KaTeX
+    mathjax = false
   # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
   [params.page.mapbox]
-  # access token of Mapbox GL JS
-  accessToken = ""
-  # style for the light theme
-  lightStyle = ""
-  # style for the dark theme
-  darkStyle = ""
-  # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-  navigation = true
-  # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-  geolocate = true
-  # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-  scale = true
-  # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-  fullscreen = true
+    # access token of Mapbox GL JS
+    accessToken = ""
+    # style for the light theme
+    lightStyle = "mapbox://styles/mapbox/light-v9"
+    # style for the dark theme
+    darkStyle = "mapbox://styles/mapbox/dark-v9"
+    # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
+    navigation = true
+    # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
+    geolocate = true
+    # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
+    scale = true
+    # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
+    fullscreen = true
   # Social share links in post page
   [params.page.share]
   enable        = true
@@ -419,193 +422,209 @@ seriesNavigation = true
   Skype         = false
   Trello        = false
   Mix           = false
-  Telegram      = true
+  Mastodon      = false
+  Telegram      = false
+
+  # instant.page config
+  [params.page.instantpage]
+    enable = false
+
   # Comment config
   [params.page.comment]
   enable = false
     # Disqus comment config (https://disqus.com/)
     [params.page.comment.disqus]
-    enable = false
-    # Disqus shortname to use Disqus in posts
-    shortname = ""
+      enable = false
+      # Disqus shortname to use Disqus in posts
+      shortname = ""
     # Gitalk comment config (https://github.com/gitalk/gitalk)
     [params.page.comment.gitalk]
-    enable       = false
-    owner        = ""
-    repo         = ""
-    clientId     = ""
-    clientSecret = ""
+      enable       = false
+      owner        = ""
+      repo         = ""
+      clientId     = ""
+      clientSecret = ""
     # Valine comment config (https://github.com/xCss/Valine)
     [params.page.comment.valine]
-    enable      = false
-    appId       = ""
-    appKey      = ""
-    placeholder = ""
-    avatar      = "mp"
-    meta        = ""
-    pageSize    = 10
-    lang        = ""
-    visitor     = true
-    recordIP    = true
-    highlight   = true
-    enableQQ    = false
-    serverURLs  = ""
-    # emoji data file name, default is "google.yml"
-    # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-    # located in "themes/CodeIT/assets/data/emoji/" directory
-    # you can store your own data files in the same path under your project:
-    # "assets/data/emoji/"
-    emoji = ""
+      enable      = false
+      appId       = ""
+      appKey      = ""
+      placeholder = ""
+      avatar      = "mp"
+      meta        = ""
+      pageSize    = 10
+      lang        = ""
+      visitor     = true
+      recordIP    = true
+      highlight   = true
+      enableQQ    = false
+      serverURLs  = ""
+      # emoji data file name, default is "google.yml"
+      # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
+      # located in "themes/CodeIT/assets/data/emoji/" directory
+      # you can store your own data files in the same path under your project:
+      # "assets/data/emoji/"
+      emoji = ""
     # Waline comment config (https://waline.js.org)
     [params.page.comment.waline]
-    enable         = false
-    serverURL      = ""
-    placeholder    = "Just Go Go."
-    wordLimit      = 0
-    avatar         = "mp"
-    meta           = ["nick", "mail", "link"]
-    pageSize       = 10
-    lang           = "en"
-    visitor        = true
-    highlight      = true
-    avatarCDN      = ""
-    avatarForce    = false
-    emojiCDN       = "https://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/"
-    emojiMaps      = "微博表情包"
-    requiredFields = []
-    anonymous      = false
+      enable         = false
+      serverURL      = ""
+      placeholder    = "Just Go Go."
+      wordLimit      = 0
+      avatar         = "mp"
+      meta           = ["nick", "mail", "link"]
+      pageSize       = 10
+      lang           = "en"
+      visitor        = true
+      highlight      = true
+      avatarCDN      = ""
+      avatarForce    = false
+      emojiCDN       = "https://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/"
+      emojiMaps      = "微博表情包"
+      requiredFields = []
+      anonymous      = false
     # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
     [params.page.comment.facebook]
-    enable       = false
-    width        = "100%"
-    numPosts     = 10
-    appId        = ""
-    languageCode = ""
+      enable       = false
+      width        = "100%"
+      numPosts     = 10
+      appId        = ""
+      languageCode = ""
     # Telegram comments config (https://comments.app/)
     [params.page.comment.telegram]
-    enable   = false
-    siteID   = ""
-    limit    = 5
-    height   = ""
-    color    = ""
-    colorful = true
-    dislikes = false
-    outlined = false
+      enable   = false
+      siteID   = ""
+      limit    = 5
+      height   = ""
+      color    = ""
+      colorful = true
+      dislikes = false
+      outlined = false
     # Commento comment config (https://commento.io/)
     [params.page.comment.commento]
-    enable = false
+      enable = false
     # Utterances comment config (https://utteranc.es/)
     [params.page.comment.utterances]
-    enable = false
-    # owner/repo
-    repo       = ""
-    issueTerm  = "pathname"
-    label      = ""
-    lightTheme = "github-light"
-    darkTheme  = "github-dark"
+      enable = false
+      # owner/repo
+      repo       = ""
+      issueTerm  = "pathname"
+      label      = ""
+      lightTheme = "github-light"
+      darkTheme  = "github-dark"
     # Twikoo comment config (https://twikoo.js.org/)
     [params.page.comment.twikoo]
-    enable       = true
-    envId        = "https://doit-docs-comment-twikoo.vercel.app/"
-    region       = ""
-    path         = ""
-    visitor      = true
-    commentCount = true
+      enable       = true
+      envId        = "https://doit-docs-comment-twikoo.vercel.app/"
+      region       = ""
+      path         = ""
+      visitor      = true
+      commentCount = true
     # Vssue comment config (https://vssue.js.org//)
     [params.page.comment.vssue]
-    enable       = false
-    platform     = ""    # ("bitbucket", "gitea", "gitee", "github", "gitlab")
-    owner        = ""
-    repo         = ""
-    clientId     = ""
-    clientSecret = ""
+      enable       = false
+      platform     = ""    # ("bitbucket", "gitea", "gitee", "github", "gitlab")
+      owner        = ""
+      repo         = ""
+      clientId     = ""
+      clientSecret = ""
     # Remark42 comment config (https://remark42.com/)
     [params.page.comment.remark42]
-    enable                  = false
-    host                    = ""
-    site_id                 = ""
-    max_shown_comments      = 15
-    show_email_subscription = true
-    simple_view             = false
+      enable                  = false
+      host                    = ""
+      site_id                 = ""
+      max_shown_comments      = 15
+      show_email_subscription = true
+      simple_view             = false
     # giscus comment config (https://giscus.app/)
     [params.page.comment.giscus]
-    enable = false
-    # owner/repo
-    dataRepo             = ""
-    dataRepoId           = ""
-    dataCategory         = ""
-    dataCategoryId       = ""
-    dataMapping          = "pathname"
-    dataReactionsEnabled = "1"
-    dataEmitMetadata     = "0"
-    lightTheme           = "light"
-    darkTheme            = "dark"
+      enable = false
+      # owner/repo
+      dataRepo             = ""
+      dataRepoId           = ""
+      dataCategory         = ""
+      dataCategoryId       = ""
+      dataMapping          = "pathname"
+      dataReactionsEnabled = "1"
+      dataEmitMetadata     = "0"
+      lightTheme           = "light"
+      darkTheme            = "dark"
+    # artalk comment config
+    [params.page.comment.artalk]
+      enable = false
+      server = ""
+      site = ""
+      lite = false
+      katex = false
+      lightbox = false
+      pageview = true
+      commentCount = true
 
-# Third-party library config
-[params.page.library]
-  [params.page.library.css]
-  # someCSS = "some.css"
-  # DoIt NEW | 0.2.14 Enhance third-party library config
-  # [params.page.library.css.someOtherCSS]
-  #   src = "someOther.css"
-  #   defer = true
-  #   attr = "customAttribute"
-  # located in "assets/"
-  # Or
-  # someCSS = "https://cdn.example.com/some.css"
-  [params.page.library.js]
-  # someJavaScript = "some.js"
-  # DoIt NEW | 0.2.14 Enhance third-party library config
-  # [params.page.library.js.someOtherJavaScript]
-  #   src = "someOther.js"
-  #   defer = false
-  #   async = true
-  #   attr = "customAttribute"
-  # located in "assets/"
-  # Or
-  # someJavaScript = "https://cdn.example.com/some.js"
+  # Third-party library config
+  [params.page.library]
+    [params.page.library.css]
+    # someCSS = "some.css"
+    # DoIt NEW | 0.2.14 Enhance third-party library config
+    # [params.page.library.css.someOtherCSS]
+    #   src = "someOther.css"
+    #   defer = true
+    #   attr = "customAttribute"
+    # located in "assets/"
+    # Or
+    # someCSS = "https://cdn.example.com/some.css"
+    [params.page.library.js]
+    # someJavaScript = "some.js"
+    # DoIt NEW | 0.2.14 Enhance third-party library config
+    # [params.page.library.js.someOtherJavaScript]
+    #   src = "someOther.js"
+    #   defer = false
+    #   async = true
+    #   attr = "customAttribute"
+    # located in "assets/"
+    # Or
+    # someJavaScript = "https://cdn.example.com/some.js"
 
-# Page SEO config
-[params.page.seo]
-# image URL
-images = []
-  # Publisher info
-  [params.page.seo.publisher]
-  name    = "xxxx"
-  logoUrl = ""
+  # Page SEO config
+  [params.page.seo]
+  # image URL
+  images = []
+    # Publisher info
+    [params.page.seo.publisher]
+    name    = "xxxx"
+    logoUrl = ""
 
-# DoIt NEW | 0.2.14 Related content config
-[params.page.related]
-enable = true
-count  = 5
+  # DoIt NEW | 0.2.14 Related content config
+  [params.page.related]
+  enable = true
+  count  = 5
 
 # Sponsor config
 [params.sponsor]
-enable = false
-bio    = "If you find this post helpful, please consider sponsoring."
-link   = "https://github.com/sponsors/HEIGE-PCloud"
-# custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
+  enable = false
+  bio    = "If you find this post helpful, please consider sponsoring."
+  link   = "https://github.com/sponsors/HEIGE-PCloud"
+  # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
 
 # TypeIt config
 [params.typeit]
-# typing speed between each step (measured in milliseconds)
-speed = 100
-# blinking speed of the cursor (measured in milliseconds)
-cursorSpeed = 1000
-# character used for the cursor (HTML format is supported)
-cursorChar = "|"
-# cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-duration = -1
+  # typing speed between each step (measured in milliseconds)
+  speed = 100
+  # blinking speed of the cursor (measured in milliseconds)
+  cursorSpeed = 1000
+  # character used for the cursor (HTML format is supported)
+  cursorChar = "|"
+  # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
+  duration = -1
 
 # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
 [params.verification]
-google    = ""
-bing      = ""
-yandex    = ""
-pinterest = ""
-baidu     = ""
-so        = "" # 360 search
-sogou     = ""
+  google    = ""
+  bing      = ""
+  yandex    = ""
+  pinterest = ""
+  baidu     = ""
+  so        = "" # 360 search
+  sogou     = ""
 
 # Site SEO config
 [params.seo]
@@ -616,98 +635,96 @@ thumbnailUrl = ""
 
 # Analytics config
 [params.analytics]
-enable = false
+  enable = false
   [params.analytics.google]
-  id = ""
-  # whether to anonymize IP
-  anonymizeIP = true
+    id = ""
+    # whether to anonymize IP
+    anonymizeIP = true
   # Fathom Analytics
   [params.analytics.fathom]
-  id = ""
-  # server url for your tracker if you're self hosting
-  server = ""
+    id = ""
+    # server url for your tracker if you're self hosting
+    server = ""
   # Baidu Analytics
   [params.analytics.baidu]
-  id = ""
+    id = ""
   # Umami Analytics
   [params.analytics.umami]
-  data_website_id = ""
-  src             = ""
-  data_domains    = ""
+    data_website_id = ""
+    src             = ""
+    data_domains    = ""
   # Plausible Analytics
   [params.analytics.plausible]
-  data_domain = ""
-  src         = ""
+    data_domain = ""
+    src         = ""
   # Cloudflare Analytics
   [params.analytics.cloudflare]
-  token = ""
+    token = ""
 
 # Cookie consent config
 [params.cookieconsent]
-enable = false
+  enable = true
   # text strings used for Cookie consent banner
   [params.cookieconsent.content]
-  message = ""
-  dismiss = ""
-  link    = ""
+    message = ""
+    dismiss = ""
+    link    = ""
 
 # CDN config for third-party library files
 [params.cdn]
-# CDN data file name, disabled by default
-# ("jsdelivr.yml")
-# located in "themes/CodeIT/assets/data/cdn/" directory
-# you can store your own data files in the same path under your project:
-# "assets/data/cdn/"
-data = ""
+  # CDN data file name, disabled by default
+  # ("jsdelivr.yml")
+  # located in "themes/CodeIT/assets/data/cdn/" directory
+  # you can store your own data files in the same path under your project:
+  # "assets/data/cdn/"
+  data = ""
 
 # Compatibility config
 [params.compatibility]
-# whether to use Polyfill.io to be compatible with older browsers
-polyfill = false
-# whether to use object-fit-images to be compatible with older browsers
-objectFit = false
+  # whether to use Polyfill.io to be compatible with older browsers
+  polyfill = false
 
 # Search config
 # https://hugodoit.pages.dev/theme-documentation-basics/#search
 [params.search]
-enable = true
-# type of search engine ("lunr", "algolia", "fuse")
-type = "fuse"
-# max index length of the chunked content
-contentLength = 4000
-# placeholder of the search bar
-placeholder = "Search"
-# max number of results length
-maxResultLength = 10
-# snippet length of the result
-snippetLength = 30
-# HTML tag name of the highlight part in results
-highlightTag = "em"
-# whether to use the absolute URL based on the baseURL in search index
-absoluteURL = false
-[params.search.algolia]
-index     = ""
-appID     = ""
-searchKey = ""
-[params.search.fuse]
-# https://fusejs.io/api/options.html
-isCaseSensitive    = false
-minMatchCharLength = 3
-findAllMatches     = false
-location           = 0
-threshold          = 0.6
-distance           = 100
-ignoreLocation     = false
-useExtendedSearch  = false
-ignoreFieldNorm    = false
+  enable = true
+  # type of search engine ("lunr", "algolia", "fuse")
+  type = "fuse"
+  # max index length of the chunked content
+  contentLength = 4000
+  # placeholder of the search bar
+  placeholder = "Search"
+  # max number of results length
+  maxResultLength = 10
+  # snippet length of the result
+  snippetLength = 30
+  # HTML tag name of the highlight part in results
+  highlightTag = "em"
+  # whether to use the absolute URL based on the baseURL in search index
+  absoluteURL = false
+  [params.search.algolia]
+    index     = ""
+    appID     = ""
+    searchKey = ""
+  [params.search.fuse]
+    # https://fusejs.io/api/options.html
+    isCaseSensitive = false
+    minMatchCharLength = 2
+    findAllMatches = false
+    location = 0
+    threshold = 0.3
+    distance = 100
+    ignoreLocation = false
+    useExtendedSearch = false
+    ignoreFieldNorm = false
 
 # Author config
 [params.author]
-name  = "Wen-Wei Tseng"
-email = "sosiristseng@gmail.com"
-link  = "https://github.com/sosiristseng"
-# avatar = "/images/avatar.webp"
-gravatarEmail = "sosiristseng@gmail.com"
+  name  = "Wen-Wei Tseng"
+  email = "sosiristseng@gmail.com"
+  link  = "https://github.com/sosiristseng"
+  # avatar = "/images/avatar.webp"
+  gravatarEmail = "sosiristseng@gmail.com"
 
 # Markup related configuration in Hugo
 [markup]
@@ -730,59 +747,59 @@ gravatarEmail = "sosiristseng@gmail.com"
     taskList       = true
     typographer    = true
     [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
     [markup.goldmark.renderer]
-    # whether to use HTML tags directly in the document
-    unsafe = true
+      # whether to use HTML tags directly in the document
+      unsafe = true
   # Table Of Contents settings
   [markup.tableOfContents]
-  startLevel = 2
-  endLevel   = 6
+    startLevel = 2
+    endLevel   = 6
 
 # Sitemap config
 [sitemap]
-changefreq = "weekly"
-filename   = "sitemap.xml"
-priority   = 0.5
+  changefreq = "weekly"
+  filename   = "sitemap.xml"
+  priority   = 0.5
 
 # Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
 [permalinks]
-posts = ":year/:month/:filename"
+  posts = ":year/:month/:filename"
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
   # privacy of the Google Analytics (replaced by params.analytics.google)
   [privacy.googleAnalytics]
   # ...
-  [privacy.twitter]
-  enableDNT = true
+  [privacy.x]
+    enableDNT = true
   [privacy.youtube]
-  privacyEnhanced = true
+    privacyEnhanced = true
 
 # Options to make output .md files
 [mediaTypes]
   [mediaTypes."text/plain"]
-  suffixes = ["md"]
+    suffixes = ["md"]
 
 # Options to make output .md files
 [outputFormats.MarkDown]
-mediaType   = "text/plain"
-isPlainText = true
-isHTML      = false
+  mediaType   = "text/plain"
+  isPlainText = true
+  isHTML      = false
 
 # Options to make hugo output files
 [outputs]
-home         = ["HTML", "JSON", "RSS"]
-page         = ["HTML", "MarkDown"]
-section      = ["HTML", "RSS"]
-taxonomy     = ["HTML", "RSS"]
+  home         = ["HTML", "JSON", "RSS"]
+  page         = ["HTML", "MarkDown"]
+  section      = ["HTML", "RSS"]
+  taxonomy     = ["HTML", "RSS"]
 
 # Options for taxonomies
 [taxonomies]
-author   = "authors"
-category = "categories"
-tag      = "tags"
-series   = "series"
+  author   = "authors"
+  category = "categories"
+  tag      = "tags"
+  series   = "series"
